@@ -7,17 +7,17 @@ The system predicts shelf-level sales using specific item-store combinations and
 ## Key Features
 
 ### 1. Multi-model Forecasting
-		- LightGBM: feature-rich gradient boosting based ensemble with 40+ engineered features
-		- SARIMA: statistical time series modeling for seasonal patterns
-		- Prophet: Facebook's robust forecasting package for trend and seasonality
-		- LSTM: deep learning technique for complex sequential dependencies
+	- LightGBM: feature-rich gradient boosting based ensemble with more than 40 engineered features
+	- SARIMA: statistical time series modeling for seasonal patterns
+	- Prophet: Facebook's robust forecasting package for trend and seasonality
+	- LSTM: deep learning technique for complex sequential dependencies
    
 ### 2. Advanced Feature Engineering
-		- Temporal Features: day of week, month, holidays, seasonality
-		- Lag Features: 1, 7, 14, 30 day historical sales
-		- Rolling Statistics: moving averages and standard deviations
-		- External Factors: oil prices, transactions, promotions
-		- Product & Store Metadata: product perishability, product families, store clusters, store location
+	- Temporal Features: day of week, month, holidays, seasonality
+	- Lag Features: 1, 7, 14, 30 day historical sales
+	- Rolling Statistics: moving averages and standard deviations
+	- External Factors: oil prices, transactions, promotions
+	- Product & Store Metadata: product perishability, product families, store clusters, store location
    
 ### 3. Stratified Sampling
    Efficient training on sample of data (10 stores and 10 items) ensuring representation of different product families and store clusters.
@@ -148,27 +148,27 @@ The project generates a dashboard of insights including:
 
 ## Installation & Usage
 
-1. Clone the repository
+**1. Clone the repository**
 ```
 git clone https://github.com/yourusername/Shelf-Level-Grocery-Sales-Forecasting.git
 cd Shelf-Level-Grocery-Sales-Forecasting
 ```
 
-2. Install dependencies
+**2. Install dependencies**
 ```
 pip install pandas numpy matplotlib seaborn plotly lightgbm tensorflow prophet google-generativeai py7zr
 ```
 
-3. Data Download
-- Download the Corporación Favorita Grocery Sales Forecasting dataset.
+**3. Data Download**
+- Download the [Corporación Favorita Grocery Sales Forecasting](https://www.kaggle.com/c/favorita-grocery-sales-forecasting/data) dataset.
 - Place .7z files in the input/ directory.
 
-4. Configure API
+**4. Configure API**
 - Get a Google Gemini API Key.
 - Set it in your environment variables or a .env file as GEMINI_API_KEY.
 
-5.  Run the notebook
-Open shelf-level-grocery-sales-forecasting.ipynb and run all cells.
+**5.  Run the notebook**
+- Open shelf-level-grocery-sales-forecasting.ipynb and run all cells.
 
 
 ## Future Improvements
