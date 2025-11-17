@@ -7,34 +7,34 @@ The system predicts shelf-level sales using specific item-store combinations and
 ## Key Features
 
 ### 1. Multi-model Forecasting
-	- LightGBM: feature-rich gradient boosting based ensemble with more than 40 engineered features
-	- SARIMA: statistical time series modeling for seasonal patterns
-	- Prophet: Facebook's robust forecasting package for trend and seasonality
-	- LSTM: deep learning technique for complex sequential dependencies
+- LightGBM: feature-rich gradient boosting based ensemble with more than 40 engineered features
+- SARIMA: statistical time series modeling for seasonal patterns
+- Prophet: Facebook's robust forecasting package for trend and seasonality
+- LSTM: deep learning technique for complex sequential dependencies
    
 ### 2. Advanced Feature Engineering
-	- Temporal Features: day of week, month, holidays, seasonality
-	- Lag Features: 1, 7, 14, 30 day historical sales
-	- Rolling Statistics: moving averages and standard deviations
-	- External Factors: oil prices, transactions, promotions
-	- Product & Store Metadata: product perishability, product families, store clusters, store location
+- Temporal Features: day of week, month, holidays, seasonality
+- Lag Features: 1, 7, 14, 30 day historical sales
+- Rolling Statistics: moving averages and standard deviations
+- External Factors: oil prices, transactions, promotions
+- Product & Store Metadata: product perishability, product families, store clusters, store location
    
 ### 3. Stratified Sampling
-   Efficient training on sample of data (10 stores and 10 items) ensuring representation of different product families and store clusters.
+Efficient training on sample of data (10 stores and 10 items) ensuring representation of different product families and store clusters.
    
 ### 4. Inventory Simulation
-  	An intelligent inventory simulation engine that calculates:
-  	- Dynamic Safety Stock: based on demand variability (σ × √Lead Time)
-  	- Reorder Points: dynamic thresholds considering lead time (Lead Time × Demand + Safety Stock)
-  	- Lead Time Optimization: delivery schedules based on specific product families
-  	- Service Level Targeting: 95% in-stock probability
-  	- Perishability constraints
+An intelligent inventory simulation engine that calculates:
+- Dynamic Safety Stock: based on demand variability (σ × √Lead Time)
+- Reorder Points: dynamic thresholds considering lead time (Lead Time × Demand + Safety Stock)
+- Lead Time Optimization: delivery schedules based on specific product families
+- Service Level Targeting: 95% in-stock probability
+- Perishability constraints
 
 ### 5.  AI powered Alert Generation
-  	Uses Gemini Pro API to transform raw data into urgent, professional business alerts for making quick, time-efficient decisions in supply chain management.
-  	- Context-Aware Recommendations: considers perishability, urgency, risk
-  	- Actionable Insights: specific reorder quantities and timelines
-  	- Fallback templates in case of API failure: reliable alerts in absence of API access
+Uses Gemini Pro API to transform raw data into urgent, professional business alerts for making quick, time-efficient decisions in supply chain management.
+- Context-Aware Recommendations: considers perishability, urgency, risk
+- Actionable Insights: specific reorder quantities and timelines
+- Fallback templates in case of API failure: reliable alerts in absence of API access
 
 
 ## Tech Stack
@@ -59,10 +59,10 @@ The system predicts shelf-level sales using specific item-store combinations and
 
 ### 2. Feature Engineering
 
-	Created a comprehensive set of features:
-	- Temporal: day of week, month, holidays (national/regional/local).
-	- Economic: oil price volatility and lag features.
-	- History: sales lags (1, 7, 14, 30 days) and rolling window statistics (mean, std dev).
+Created a comprehensive set of features:
+- Temporal: day of week, month, holidays (national/regional/local).
+- Economic: oil price volatility and lag features.
+- History: sales lags (1, 7, 14, 30 days) and rolling window statistics (mean, std dev).
 
 
 ### 3. Model Selection & Training
@@ -88,10 +88,10 @@ LightGBM with engineered features performs significantly better than pure time s
 
 ### 4. Inventory Alert System 
 
-	The system simulates daily inventory depletion based on actual forecasts.
-	- Main Logic: Triggers an alert when Inventory <= Reorder Point.
-	- Perishability Logic: Perishable items have tighter safety stock buffers to reduce waste.
-	- Lead Time Awareness: Calculates stockout risk percentages relative to supplier lead times (1-5 days depending on specific category).
+The system simulates daily inventory depletion based on actual forecasts.
+- Main Logic: Triggers an alert when Inventory <= Reorder Point.
+- Perishability Logic: Perishable items have tighter safety stock buffers to reduce waste.
+- Lead Time Awareness: Calculates stockout risk percentages relative to supplier lead times (1-5 days depending on specific category).
 
 **Alert Priority Levels**
 
