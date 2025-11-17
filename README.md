@@ -98,7 +98,7 @@ The system simulates daily inventory depletion based on actual forecasts.
 | Priority | Condition | Action | Timeline |
 | :--- | :--- | :--- | :--- |
 | **CRITICAL** | Stockout before restock arrives | Order immediately (same day) | Immediate |
-| **HIGH** | Stockout within 1.5$\times$ lead time | Order within 1-2 days | 1-2 days |
+| **HIGH** | Stockout within 1.5 x lead time | Order within 1-2 days | 1-2 days |
 | **MEDIUM** | Below reorder point | Order within 3-5 days | 3-5 days |
 
 
